@@ -1,0 +1,21 @@
+
+if SHIELD_CRADIO36_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Cradio36"
+
+endif
+
+
+if SHIELD_CRADIO36_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Cradio36-Right"
+
+endif
+
+
+config ZMK_KSCAN_DIRECT_POLLING
+	default y
+
+

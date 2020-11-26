@@ -1,0 +1,21 @@
+
+if SHIELD_CRADIOS_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Cradio"
+
+endif
+
+
+if SHIELD_CRADIOS_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "CRADIOS_Right"
+
+endif
+
+
+config ZMK_KSCAN_DIRECT_POLLING
+	default n
+
+
