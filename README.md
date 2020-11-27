@@ -1,2 +1,2 @@
-# zmk-sheilds
+# zmk-shields
 My shields for zmk
