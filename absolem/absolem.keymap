@@ -14,18 +14,72 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |   BKSP    |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |    '      |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | SHFT(RET) |
-//                         | ALT | LWR | SPC | RSE  | ALT |
+
                         bindings = <
-   &kp Q &kp W &kp E &kp R &kp T   	&kp Y &kp U  &kp I    &kp O   &kp P    
-  &kp A &kp S &kp D &kp F &kp G   	&kp H &kp J  &kp K    &kp L   &kp SCLN 
-   &kp Z &kp X &kp C &kp V &kp B   	&kp N &kp M  &kp CMMA &kp DOT &kp FSLH 
-         &kp LGUI  &mo 1 &kp LCTL	&kp SPC  &mo 2  &kp RALT
+   &kp Q &kp W &kp F &kp P &kp B   			&kp J &kp L  &kp U    &kp Y  &kp A  
+   &kp A &kp R &kp S &kp T &kp G   			&kp M &kp N  &kp E    &kp I  &kp O
+   &kp Z &kp X &kp C &kp D &kp V   			&kp N &kp M  &mo 1    &mo 2 &kp E 
+   &mt LCTL TAB &lt 3 SPACE  &kp RET 			&kp LSFT &lt 4 BKSP   &mt LGUI ESC
                         >;
                 };
+
+
+
+                sym_layer {
+
+                        bindings = <
+            &kp GT    &kp RBKT &kp RBRC  &kp RPRN  &kp BSLH  	&kp TILDE &trans &trans &trans &kp ATSN 
+            &kp LT    &kp LBKT &kp LBRC  &kp LPRN  &kp FSLH     &kp PRCNT &kp ASTRK &trans &kp COLN  &kp SCLN 
+            &kp HASH  &kp CURU &kp QMARK &kp BANG  &kp PIPE 	&kp AMPS  &kp EQL &trans &kp KPLS &kp GRAVE
+            &kp UNDER &kp QUOT &kp DQT				&kp DOT  &kp CMMA &kp MINUS
+              
+
+                        >;
+                };
+
+
+         
+  		msc_layer {
+
+                        bindings = <
+     &kp GT    &kp RBKT &kp RBRC  &kp RPRN  &kp BSLH  	&kp TILDE &trans &trans &trans &kp ATSN 
+            &kp LT    &kp LBKT &kp LBRC  &kp LPRN  &kp FSLH     &kp PRCNT &kp ASTRK &trans &kp COLN  &kp SCLN 
+            &kp HASH  &kp CURU &kp QMARK &kp BANG  &kp PIPE 	&kp AMPS  &kp EQL &trans &kp KPLS &kp GRAVE
+            &kp UNDER &kp QUOT &kp DQT				&kp DOT  &kp CMMA &kp MINUS
+                        >;
+                };
+
+
+
+                nav_layer {
+
+                        bindings = <
+   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5  		&kp MINUS &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp BKSP
+   &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   		&kp NUM_0 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp DOT
+   &kp F11   &kp F12   &kp F13	 &trans    &trans 		&kp PLUS  &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp CMMA
+   &kp TAB &kp SPACE &kp RET 					&trans 	&trans &trans
+                        >;
+                };
+
+
+
+//NUM
+                num_layer {
+
+                        bindings = <
+  
+   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5  		&kp MINUS &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp BKSP
+   &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   		&kp NUM_0 &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp DOT
+   &kp F11   &kp F12   &kp F13	 &trans    &trans 		&kp PLUS  &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp CMMA
+   &kp TAB &kp SPACE &kp RET 					&trans 	&trans &trans
+
+                        >;
+                };
+
+  
+
+
+
 
           
         };
