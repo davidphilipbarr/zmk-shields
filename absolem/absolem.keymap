@@ -18,7 +18,7 @@
                         bindings = <
    &kp Q &kp W &kp F &kp P &kp B   			&kp J &kp L  &kp U    &kp Y  &kp A  
    &kp A &kp R &kp S &kp T &kp G   			&kp M &kp N  &kp E    &kp I  &kp O
-   &kp Z &kp X &kp C &kp D &kp V   			&kp N &kp M  &mo 1    &mo 2 &kp E 
+   &kp Z &kp X &kp C &kp D &kp V   			&kp N &kp M  &sl 1    &sl 2 &kp E 
    &mt LCTL TAB &lt 3 SPACE  &kp RET 			&kp LSFT &lt 4 BKSP   &mt LGUI ESC
                         >;
                 };
