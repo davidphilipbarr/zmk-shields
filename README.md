@@ -1,2 +1,2 @@
 # zmk-shields
-My shields for zmk
+My shields and scripts and stuff for zmk
