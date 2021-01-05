@@ -1,8 +1,8 @@
 # Copyright (c) 2020 Pete Johanson
 # SPDX-License-Identifier: MIT
 
-config SHIELD_MACRO6
-	def_bool $(shields_list_contains,macro6)
+config SHIELD_MACRO3
+	def_bool $(shields_list_contains,macro3)
 
 
 

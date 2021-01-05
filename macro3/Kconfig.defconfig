@@ -1,9 +1,9 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_MACRO6
+if SHIELD_MACRO3
 
 config ZMK_KEYBOARD_NAME
-	default "Macro6"
+	default "Macro3"
 
 endif
