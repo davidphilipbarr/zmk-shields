@@ -1,0 +1,26 @@
+if SHIELD_SATURNINE_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Saturnine"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+
+if SHIELD_SATURNINE_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Saturnine_Right"
+
+endif
+
+
+if SHIELD_SATURNINE_RIGHT || SHIELD_SATURNINE_LEFT
+
+config ZMK_SPLIT
+	default y
+
+
+endif
