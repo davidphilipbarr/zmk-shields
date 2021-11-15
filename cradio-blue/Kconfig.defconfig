@@ -1,0 +1,27 @@
+
+if SHIELD_CRADIO-BLUE_LEFT 
+
+config ZMK_KEYBOARD_NAME
+	default "Cradiozlue"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+
+if SHIELD_CRADIO-BLUE_RIGHT 
+config ZMK_KEYBOARD_NAME
+	default "CRADIOb_Right"
+endif
+
+
+if SHIELD_CRADIO-BLUE_RIGHT || SHIELD_CRADIO-BLUE_LEFT
+
+config ZMK_SPLIT
+	default y
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+	default n
+config ZMK_BATTERY_NRF_VDDH
+	default y
+endif
