@@ -1,0 +1,164 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define TRI     3
+
+
+&mt {
+
+};
+
+
+/ { 
+
+    combos {
+        compatible = "zmk,combos";
+            combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC> ;
+        };
+        
+            combo_esc2 {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp ESC> ;
+        };
+      
+            combo_tab {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            bindings = <&kp TAB>;
+        };
+        
+  
+            combo_lgui {
+            timeout-ms = <50>;
+            key-positions = <9 10 >;
+            bindings = <&kp LGUI>;
+        };
+
+     
+
+                  combo_lalt {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LALT>;
+        };
+
+               combo_ralt {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp RALT>;
+        };
+
+            combo_rgui {
+            timeout-ms = <50>;
+            key-positions = <13 14>;
+            bindings = <&kp RGUI>;
+        };
+        
+            combo_del {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp BKSP>;
+        };
+        
+            combo_q {
+            timeout-ms = <50>;
+            key-positions = <8 18>;
+            bindings = <&kp Q>;
+        };
+        
+            combo_sp {
+            timeout-ms = <50>;
+            key-positions = <17 27>;
+            bindings = <&kp QUOT>;
+        };
+
+            combo_bsp {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp BKSP>;
+        };
+
+    };
+    
+    
+     behaviors {
+        
+	td: tapdance {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPDANCE";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+	
+    };
+
+        keymap {
+                compatible = "zmk,keymap";
+                
+       		default_layer {
+		bindings = <
+
+                         		  // (0)         (1)               (2)                 (3)                 (4)         (5)     (6)         (7)
+		 	                &kp W       &kp E               &kp R               &kp T 			    &kp Y       &kp U   &kp I       &kp O   
+           			 //  (8)         (9)         (10)                (11)                (12)                (13)        (14)    (15)        (16)         (17)
+				&kp A 	    &kp S       &kp D               &kp F               &kp G 			    &kp H       &kp J   &kp K       &kp L 	    &kp P
+		    //  (18)        (19)         (20)               (21)                (22)                (23)        (24)    (25)        (26)         (27)
+                &mt LSFT Z	&kp X       &kp C               &kp V               &kp B			    &kp N       &kp M   &kp CMMA    &kp DOT 	&mt LSFT RET
+                                                    //      (28)                (29)                (30)        (31)
+          				                                    &mo 1               &kp LCTL  		    &kp SPC     &mo 2 
+		>;
+		};
+
+       
+        //mo1
+		left_layer {
+		bindings = <
+		                &kp NUM_2       &kp NUM_3           &kp NUM_4           &kp NUM_5		        &kp NUM_6   &kp NUM_7       &kp NUM_8   &kp NUM_9 
+		&kp NUM_1       &kp LC(S)       &kp DQT             &kp PIPE2           &kp HASH 		        &kp MINUS   &kp EQL         &kp LBKT    &kp RBKT        &kp NUM_0
+		&kp ESC         &kp TILDE 	    &kp NON_US_BSLH     &kp NON_US_HASH     &kp TILDE2 	            &kp MINUS   &kp GRAVE       &kp LBKT    &kp RBKT        &kp DEL 
+		                    
+                                                            &mo 1               &kp LGUI  			    &kp RGUI    &mo 2 
+		>;
+		};
+	
+    
+        //mo2
+		right_layer {
+		bindings = <
+		                &kp ATSN        &kp HASH            &kp DLLR            &kp PRCT    			&kp CRRT    &kp AMPS        &kp KMLT    &td RPRN LPRN     
+		&kp BANG        &kp QMARK       &kp FSLH            &kp COLN            &kp SCLN 			    &kp MINUS   &kp KP_EQUAL    &kp LBRC    &kp RBRC        &kp BKSP
+		&kp LSFT        &kp KPLS        &kp LBKT            &kp RBKT            &kp BSLH    			&kp UNDER   &kp LEFT        &kp DOWN    &kp UP          &kp RIGHT
+
+					                                        &mo 3               &kp LCTL  				&kp SPC     &mo 2 
+		>;
+		};	
+		
+		tri_layer {
+		bindings = <
+		                &kp NUM_2       &kp NUM_3           &kp NUM_4          &kp NUM_5 			    &kp NUM_6   &kp NUM_7       &kp NUM_8       &kp NUM_9 
+		&kp NUM_1       &kp F1          &kp F2              &kp F3             &kp F4 					&kp CAPS    &kp PG_UP       &kp K_VOL_UP    &kp K_MUTE  &trans 
+		&bt BT_CLR      &bt BT_NXT      &bt BT_PRV          &kp F6             &kp F7   				&trans      &kp PG_DN       &kp K_VOL_DN    &trans      &trans   
+		
+        			                                        &trans             &trans  				    &trans      &trans 
+		>;
+		};	
+	};
+};
