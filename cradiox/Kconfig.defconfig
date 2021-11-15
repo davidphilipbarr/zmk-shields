@@ -1,0 +1,27 @@
+
+if SHIELD_CRADIOX_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "CradioX"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+
+if SHIELD_CRADIOX_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "CRADIOX_Right"
+
+endif
+
+
+if SHIELD_CRADIOX_RIGHT || SHIELD_CRADIOX_LEFT
+
+config ZMK_SPLIT
+	default y
+
+
+endif
