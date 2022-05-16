@@ -1,0 +1,8 @@
+file_format: "1"
+id: nazar
+name: nazar
+type: shield
+url: nazar
+requires: [seeed_xiao]
+features:
+  - keys
