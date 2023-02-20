@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+#include "cradio-screen.dtsi"
+
+
+&default_transform {
+	col-offset = <17>;
+};
+
+
+

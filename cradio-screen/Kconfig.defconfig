@@ -1,0 +1,33 @@
+
+if SHIELD_CRADIO-SCREEN_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Cradio-Screen"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+config ZMK_DISPLAY
+	select LVGL_FONT_MONTSERRAT_24
+     
+endif	
+
+
+
+if SHIELD_CRADIO-SCREEN_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "cs_Right"
+
+endif
+
+
+if SHIELD_CRADIO-SCREEN_RIGHT || SHIELD_CRADIO-SCREEN_LEFT
+
+config ZMK_SPLIT
+	default y
+	
+
+	
+	
+endif
